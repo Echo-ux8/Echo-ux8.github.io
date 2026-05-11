@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>贵州归兰水乡特色美食风景</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .top-header {
+            position: relative;
+            width: 100%;
+            height: 300px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            text-align: center;
+        }
+
+        .video-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            pointer-events: auto;
+        }
+
+        .video-bg video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 1;
+            filter: none;
+        }
+
+        .header-text {
+            position: relative;
+            z-index: 1;
+            background: rgba(0,0,0,0.3);
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .volume-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            z-index: 2;
+            background: rgba(0,0,0,0.5);
+            color: #fff;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<header class="top-header">
+    <div class="video-bg">
+        <video id="bgVideo" autoplay muted loop playsinline>
+            <source src="vedio/图1.mp4" type="video/mp4">
+        </video>
+    </div>
+    <button class="volume-btn" id="volumeBtn">🔇 静音</button>
+    <div class="header-text">
+        <h1>🏞️ 贵州归兰水乡 · 美食风景文化</h1>
+        <p>山水秘境，水乡归兰，领略布依风情舌尖与自然之美</p>
+    </div>
+</header>
+
+<div class="container">
+    <div class="intro-box">
+        <h2>归兰水乡简介</h2>
+        <p>归兰水乡地处贵州黔南，山清水秀、溪流纵横，是原生态布依水乡秘境。这里食材天然纯净，美食以布依风味为主，鲜、香、酸、醇，风景与舌尖美味相融，尽显黔南原生态水乡风情。</p>
+    </div>
+
+    <div class="food-wrap">
+        <div class="food-card">
+            <img src="img/图4.jpg" alt="归兰水乡鱼酱">
+            <div class="text-box">
+                <h3>归兰鱼酱</h3>
+                <p>归兰鱼酱是布依特色招牌美味，选用溪涧鲜活小鱼秘制发酵，酱香浓郁、鲜辣入味，拌饭、炒菜皆绝佳，是归兰水乡最具代表性的乡土滋味。</p>
+            </div>
+        </div>
+
+        <div class="food-card">
+            <img src="img/图3.jpg" alt="归兰清水鱼">
+            <div class="text-box">
+                <h3>归兰清水鱼</h3>
+                <p>归兰清水鱼取自山溪活鱼，清汤炖煮或清蒸，鱼肉鲜嫩清甜、无腥味，最大保留原生态鲜味，是水乡最地道的养生河鲜美食。</p>
+            </div>
+        </div>
+
+        <div class="food-card">
+            <img src="img/图1.jpg" alt="归兰布依花米饭">
+            <div class="text-box">
+                <h3>布依花米饭</h3>
+                <p>归兰布依花米饭用天然植物染色，色彩鲜艳、米香软糯，带着天然草木清香，是布依族节庆必备，色香味俱全的传统美食。</p>
+            </div>
+        </div>
+
+        <div class="food-card">
+            <img src="img/图5.jpg" alt="归兰酸汤豆腐">
+            <div class="text-box">
+                <h3>归兰酸汤豆腐</h3>
+                <p>归兰酸汤豆腐以山泉酸汤点制，豆香醇厚、细嫩滑口，煮火锅、凉拌皆美味，酸香开胃，尽显水乡农家质朴风味。</p>
+            </div>
+        </div>
+
+       
+
+        <div class="food-card">
+            <img src="img/图2.jpg" alt="归兰水乡腊肉">
+            <div class="text-box">
+                <h3>归兰水乡腊肉</h3>
+                <p>归兰腊肉选用本地土猪，布依传统烟熏工艺，腊香浓郁、肥瘦相宜，蒸炒下饭，充满乡土年味与水乡烟火气。</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>贵州归兰水乡美食风景网页 | 秘境归兰 · 水乡风情</p>
+</footer>
+
+<script>
+    const video = document.getElementById('bgVideo');
+    const volumeBtn = document.getElementById('volumeBtn');
+    volumeBtn.addEventListener('click', () => {
+        if (video.muted) {
+            video.muted = false;
+            volumeBtn.textContent = '🔊 有声';
+        } else {
+            video.muted = true;
+            volumeBtn.textContent = '🔇 静音';
+        }
+    });
+</script>
+</body>
+</html>
