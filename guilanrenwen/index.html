@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>贵州归兰水族乡 · 特色人文故事</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "微软雅黑", sans-serif;
+        }
+
+        body {
+            /* 改成你要的国风米白底色 */
+            background: #f9f3e9;
+            color: #5a3921;
+            line-height: 1.8;
+            background-image: url(""); /* 可以自己加古风山水底纹 */
+        }
+
+        /* 顶部标题栏，改成红棕国风配色 */
+        .header-banner {
+            background: linear-gradient(90deg, #c0392b, #a52a2a);
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+
+        .header-banner h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+        }
+
+        .header-banner p {
+            font-size: 18px;
+            opacity: 0.95;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        /* 简介模块，国风米白卡片 */
+        .intro-section {
+            background: rgba(255,255,255,0.9);
+            border-radius: 16px;
+            padding: 30px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+            border: 1px solid #d4a373;
+        }
+
+        .intro-section h2 {
+            color: #a52a2a;
+            font-size: 26px;
+            margin-bottom: 15px;
+            border-left: 5px solid #c0392b;
+            padding-left: 15px;
+        }
+
+        .intro-section p {
+            font-size: 17px;
+            color: #5a3921;
+        }
+
+        /* 景点卡片，国风浅棕调 */
+        .scenery-item {
+            display: flex;
+            background: rgba(255,255,255,0.95);
+            border-radius: 16px;
+            overflow: hidden;
+            margin-bottom: 30px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            border: 1px solid #d4a373;
+        }
+
+        .scenery-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .scenery-video {
+            width: 45%;
+            background: #f5e8d8;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .scenery-video video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .scenery-text {
+            width: 55%;
+            padding: 30px;
+        }
+
+        .scenery-text h3 {
+            font-size: 24px;
+            color: #a52a2a;
+            margin-bottom: 15px;
+        }
+
+        .scenery-text p {
+            font-size: 16px;
+            color: #5a3921;
+            text-align: justify;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            color: #8b5a2b;
+            background: rgba(255,255,255,0.8);
+            font-size: 15px;
+            border-top: 1px solid #d4a373;
+        }
+    </style>
+</head>
+<body>
+    <div class="header-banner">
+        <h1>📜 贵州归兰水族乡 · 特色人文故事</h1>
+        <p>山水归兰·水家文脉｜一方秘境，一段水家传奇</p >
+    </div>
+
+    <div class="container">
+        <div class="intro-section">
+            <h2>归兰水族乡人文简介</h2>
+            <p>归兰水族乡深藏黔南群山之中，是水族文化重要传承地。这里有古朴浓郁的水家民俗、千年传承的非遗技艺、动人的山水传说、红色印记与民族风情交融，一草一木皆故事，一村一寨传文脉。</p >
+        </div>
+
+        <!-- 1 水族端节：最长的年节 -->
+        <div class="scenery-item">
+            <div class="scenery-video">
+                <video controls muted loop playsinline>
+                    <source src="video/video2.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="scenery-text">
+                <h3>水族端节：世界最长的年节</h3>
+                <p>端节是水族最盛大的传统节日，被誉为“世界最长的年节”。归兰水族乡按古俗祭祖、赛马、吃鱼包韭菜，亲友欢聚、辞旧迎新，承载着水族对丰收与平安的祈愿，是水家文化最鲜活的载体。</p >
+            </div>
+        </div>
+
+        <!-- 2 水书习俗：象形文字活化石 -->
+        <div class="scenery-item">
+            <div class="scenery-video">
+                <video controls muted loop playsinline>
+                    <source src="video/video1.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="scenery-text">
+                <h3>水书习俗：象形文字活化石</h3>
+                <p>水书是水族古老文字，被称为“象形文字活化石”，记载天文、历法、祭祀与民俗。归兰乡水书先生世代传承，用于节庆、婚嫁、祭祀，是中华民族珍贵的文化遗产，文脉绵延千年。</p >
+            </div>
+        </div>
+
+        <!-- 4 水族马尾绣：指尖上的非遗 -->
+        <div class="scenery-item">
+            <div class="scenery-video">
+                <video controls muted loop playsinline>
+                    <source src="video/video.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="scenery-text">
+                <h3>水族马尾绣：指尖上的非遗</h3>
+                <p>水族马尾绣是国家级非遗，以马尾为线、手工刺绣，图案古朴、色彩典雅，绣品耐用千年。归兰水族妇女自幼习绣，一针一线织出水族图腾与生活愿景，被誉为“刺绣的活化石”。</p >
+            </div>
+        </div>
+
+        <!-- 5 水家古寨：依山傍水的乡愁 -->
+        <div class="scenery-item">
+            <div class="scenery-video">
+                <video controls muted loop playsinline>
+                    <source src="video/video3.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="scenery-text">
+                <h3>水家古寨：依山傍水的乡愁</h3>
+                <p>归兰水族古寨依山而建、傍水而居，吊脚楼、石板路、古井古树保存完好。水家人淳朴善良、热情好客，以歌传情、以酒待客，保留着古朴的生产生活方式，是看得见的山水乡愁。</p >
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>贵州归兰水族乡特色人文故事网页 | 山水归兰 · 水家文脉</p >
+    </footer>
+</body>
+</html>
+>
