@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>贵州瓮安 · 特色人文故事</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "微软雅黑", sans-serif;
+        }
+
+        body {
+            /* 改成你要的国风米白底色 */
+            background: #f9f3e9;
+            color: #5a3921;
+            line-height: 1.8;
+            background-image: url(""); /* 可以自己加古风山水底纹 */
+        }
+
+        /* 顶部标题栏，改成红棕国风配色 */
+        .header-banner {
+            background: linear-gradient(90deg, #c0392b, #a52a2a);
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+
+        .header-banner h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+        }
+
+        .header-banner p {
+            font-size: 18px;
+            opacity: 0.95;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        /* 简介模块，国风米白卡片 */
+        .intro-section {
+            background: rgba(255,255,255,0.9);
+            border-radius: 16px;
+            padding: 30px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+            border: 1px solid #d4a373;
+        }
+
+        .intro-section h2 {
+            color: #a52a2a;
+            font-size: 26px;
+            margin-bottom: 15px;
+            border-left: 5px solid #c0392b;
+            padding-left: 15px;
+        }
+
+        .intro-section p {
+            font-size: 17px;
+            color: #5a3921;
+        }
+
+        /* 景点卡片，国风浅棕调 */
+        .scenery-item {
+            display: flex;
+            background: rgba(255,255,255,0.95);
+            border-radius: 16px;
+            overflow: hidden;
+            margin-bottom: 30px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            border: 1px solid #d4a373;
+        }
+
+        .scenery-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .scenery-video {
+            width: 45%;
+            background: #f5e8d8;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .scenery-video video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .scenery-text {
+            width: 55%;
+            padding: 30px;
+        }
+
+        .scenery-text h3 {
+            font-size: 24px;
+            color: #a52a2a;
+            margin-bottom: 15px;
+        }
+
+        .scenery-text p {
+            font-size: 16px;
+            color: #5a3921;
+            text-align: justify;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            color: #8b5a2b;
+            background: rgba(255,255,255,0.8);
+            font-size: 15px;
+            border-top: 1px solid #d4a373;
+        }
+    </style>
+</head>
+<body>
+    <div class="header-banner">
+        <h1>📜 贵州瓮安 · 特色人文故事</h1>
+        <p>千年古邑·红色瓮安｜一方水土，一段传奇</p >
+    </div>
+
+    <div class="container">
+        <div class="intro-section">
+            <h2>瓮安人文简介</h2>
+            <p>瓮安历史悠久、文脉绵长，是黔中文化重要发源地之一。这里既有千年古镇的烟火气息，也有红色革命的光辉足迹；既有民间传说的浪漫传奇，也有民族文化的深厚底蕴。一个个动人故事，串联起瓮安的千年岁月与人文风骨。</p >
+        </div>
+
+        <!-- 1 猴场会议：伟大转折的前夜 -->
+        <div class="scenery-item">
+            <div class="scenery-video">
+                <video controls muted loop playsinline>
+                    <source src="vedio/vedio3.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="scenery-text">
+                <h3>猴场会议：伟大转折的前夜</h3>
+                <p>1934年除夕，红军在瓮安草塘猴场召开了彪炳史册的猴场会议。会议排除错误思想，确定了正确行军路线，为之后的遵义会议奠定了重要基础，被称为“伟大转折的前夜”。这场发生在新年钟声里的会议，让瓮安成为中国革命史上不可磨灭的红色地标。</p >
+            </div>
+        </div>
+
+        <!-- 2 草塘千年古邑的文脉传承 -->
+        <div class="scenery-item">
+            <div class="scenery-video">
+                <video controls muted loop playsinline>
+                    <source src="vedio/vedio1.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="scenery-text">
+                <h3>草塘千年古邑的文脉传承</h3>
+                <p>草塘自宋代起便是商贸重镇，明清时期文风鼎盛，商贾云集、书院林立。当地百姓崇文重教，勤俭持家，形成了独特的古镇文化气质。青石板路上，曾走过无数文人墨客、往来商旅；古宅院落里，藏着一代代瓮安人耕读传家、诚信善良的人文精神。</p >
+            </div>
+        </div>
+
+        <!-- 4 瓮安非遗：傩戏与民俗文化 -->
+        <div class="scenery-item">
+            <div class="scenery-video">
+                <video controls muted loop playsinline>
+                    <source src="vedio/vedio2.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="scenery-text">
+                <h3>瓮安非遗：傩戏与民俗文化</h3>
+                <p>瓮安傩戏是贵州非物质文化遗产瑰宝，被称为“戏剧活化石”。面具古朴、唱腔苍劲，表演中蕴含祈福、驱邪、感恩的民俗内涵，是当地少数民族与汉族文化交融的结晶。一场傩戏，唱的是历史，演的是生活，承载着瓮安人对天地、对生活的敬畏与热爱。</p >
+            </div>
+        </div>
+
+        <!-- 5瓮安非物质文化遗产：灯夹戏 -->
+        <div class="scenery-item">
+            <div class="scenery-video">
+                <video controls muted loop playsinline>
+                    <source src="vedio/vedio4.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="scenery-text">
+                <h3>瓮安非物质文化遗产：灯夹戏</h3>
+                <p>瓮安灯夹戏是贵州省级非遗，流传于平定营镇。为花灯与川戏巧妙融合，灯中有戏、戏中有灯，说唱结合，寓教于乐，独具地方韵味。</p >
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>贵州瓮安特色人文故事网页 | 千年古邑 · 红色瓮安</p >
+    </footer>
+</body>
+</html>
