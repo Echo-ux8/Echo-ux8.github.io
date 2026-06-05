@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>贵州三都县特色美食</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .top-header {
+            position: relative;
+            width: 100%;
+            height: 300px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            text-align: center;
+        }
+
+        .video-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            pointer-events: auto;
+        }
+
+        .video-bg video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 1;
+            filter: none;
+        }
+
+        .header-text {
+            position: relative;
+            z-index: 1;
+            background: rgba(0,0,0,0.3);
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .volume-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            z-index: 2;
+            background: rgba(0,0,0,0.5);
+            color: #fff;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<header class="top-header">
+    <div class="video-bg">
+        <video id="bgVideo" autoplay muted loop playsinline>
+            <source src="vedio/mp4.mp4" type="video/mp4">
+        </video>
+    </div>
+    <button class="volume-btn" id="volumeBtn">🔇 静音</button>
+    <div class="header-text">
+        <h1>🏞️ 贵州三都县 · 特色美食文化</h1>
+        <p>水族之都，神秘三都，品味原生态水族地道风味</p>
+    </div>
+</header>
+
+<div class="container">
+    <div class="intro-box">
+        <h2>三都美食简介</h2>
+        <p>三都是全国唯一的水族自治县，地处黔南腹地，生态优良、食材天然。本地美食以水族传统风味为核心，融合苗、侗、汉等多民族特色，以鲜、酸、香、糯为主，做法古朴、原汁原味，是黔南最具民族特色的舌尖滋味。</p>
+    </div>
+
+    <div class="food-wrap">
+        <div class="food-card">
+            <img src="img/图4.jpg" alt="三都鱼包韭菜">
+            <div class="text-box">
+                <h3>三都鱼包韭菜</h3>
+                <p>鱼包韭菜是水族非遗名菜，选用鲜活鲤鱼，搭配韭菜、生姜、米酒等腌制蒸制，肉质细嫩、鲜香浓郁，寓意吉祥，是水族节庆与待客的招牌大菜。</p>
+            </div>
+        </div>
+
+        <div class="food-card">
+            <img src="img/图2.png" alt="三都酸汤鱼">
+            <div class="text-box">
+                <h3>三都酸汤鱼</h3>
+                <p>三都酸汤鱼以本地番茄酸汤、木姜子熬煮，选用清水江活鱼，鱼肉鲜嫩、酸香开胃，带着独特水族风味，是来三都必吃的民族特色美食。</p>
+            </div>
+        </div>
+
+        <div class="food-card">
+            <img src="img/图5.jpg" alt="三都糯米粑">
+            <div class="text-box">
+                <h3>三都糯米粑</h3>
+                <p>三都糯米粑是水族传统小吃，纯糯米捶打制成，软糯筋道，可蒸可炸，蘸红糖、黄豆粉食用，香甜可口，是水族日常与节日必备美食。</p>
+            </div>
+        </div>
+
+        <div class="food-card">
+            <img src="img/图3.png" alt="三都香猪">
+            <div class="text-box">
+                <h3>三都香猪</h3>
+                <p>三都香猪是本地特产，肉质细嫩、肥瘦均匀，烤、蒸、煮皆美味，皮薄肉香、油而不腻，是黔南知名的原生态特色肉食。</p>
+            </div>
+        </div>
+
+        <div class="food-card">
+            <img src="img/图1.jpg" alt="三都魔芋豆腐">
+            <div class="text-box">
+                <h3>三都魔芋豆腐</h3>
+                <p>三都魔芋豆腐以天然魔芋制作，口感Q弹爽滑，搭配酸汤、辣椒炒制，酸辣开胃，是当地极具农家风味的健康特色菜。</p>
+            </div>
+        </div>
+
+        <div class="food-card">
+            <img src="img/图6.jpg" alt="三都糟辣椒">
+            <div class="text-box">
+                <h3>三都糟辣椒</h3>
+                <p>三都糟辣板（辣椒酸）是贵州水族传统发酵调味品。选用本地红辣椒，加姜、甜酒入坛密封发酵。色泽红亮，酸辣带甘，鲜香醇厚，开胃解腻，为黔菜经典风味</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>贵州三都县特色美食网页 | 水族之都 · 舌尖风味</p>
+</footer>
+
+<script>
+    const video = document.getElementById('bgVideo');
+    const volumeBtn = document.getElementById('volumeBtn');
+    volumeBtn.addEventListener('click', () => {
+        if (video.muted) {
+            video.muted = false;
+            volumeBtn.textContent = '🔊 有声';
+        } else {
+            video.muted = true;
+            volumeBtn.textContent = '🔇 静音';
+        }
+    });
+</script>
+</body>
+</html>
