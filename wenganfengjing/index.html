@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>瓮安县· 异地搬迁与风景</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Microsoft YaHei", sans-serif;
+    }
+
+    /* 背景：从江主题渐变+纹理感 */
+    body {
+      background: linear-gradient(135deg, #e8f5e9 0%, #fff8e1 50%, #e3f2fd 100%);
+      background-attachment: fixed;
+      color: #333;
+    }
+
+    /* 头部：蓝绿渐变，带装饰 */
+    header {
+  /* 改成：半透明蓝绿渐变，降低饱和度，融入背景 */
+  background: linear-gradient(to right, rgba(0, 150, 136, 0.6), rgba(41, 182, 246, 0.6));
+  color: white;
+  text-align: center;
+  padding: 2.5rem 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* 阴影也减淡，更轻薄 */
+}
+
+    header h1 {
+      font-size: 2.2rem;
+      margin-bottom: 0.6rem;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+    }
+
+    header p {
+      font-size: 1.2rem;
+      opacity: 0.95;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+
+    /* 轮播图：圆角+阴影+绿色边框 */
+    .banner {
+      width: 100%;
+      height: 450px;
+      position: relative;
+      overflow: hidden;
+      margin: 30px auto;
+      border-radius: 16px;
+      box-shadow: 0 6px 20px rgba(0,100,0,0.15);
+      border: 3px solid #81c784;
+    }
+
+    .banner img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      opacity: 0;
+      transition: opacity 1.5s ease;
+    }
+
+    .banner img.active {
+      opacity: 1;
+    }
+
+    /* 介绍板块：米白+浅绿边框，层次分明 */
+    .intro {
+      background: #ffffff;
+      padding: 2.2rem;
+      border-radius: 16px;
+      margin-bottom: 2.5rem;
+      box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+      border-left: 6px solid #43a047;
+      line-height: 1.8;
+      font-size: 1.05rem;
+    }
+
+    .intro h2 {
+      color: #2e7d32;
+      margin-bottom: 1rem;
+      font-size: 1.7rem;
+      display: flex;
+      align-items: center;
+    }
+
+    .intro h2::before {
+      content: "🌿";
+      margin-right: 10px;
+    }
+
+    /* 卡片布局：多色卡片，区分主题 */
+    .card-box {
+     display: grid;
+     grid-template-columns: repeat(2, 1fr); /* 强制一行2个，平分宽度 */
+     gap: 2rem;
+     margin-bottom: 3.5rem;
+    }
+
+    .card {
+      background: white;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 20px rgba(0,100,0,0.2);
+    }
+
+    /* 卡片顶部彩色条，区分不同主题 */
+    .card:nth-child(1) { border-top: 6px solid #43a047; } /* 生态绿 */
+    .card:nth-child(2) { border-top: 6px solid #1976d2; } /* 新居蓝 */
+    .card:nth-child(3) { border-top: 6px solid #f57c00; } /* 民俗橙 */
+    .card:nth-child(4) { border-top: 6px solid #7b1fa2; } /* 产业紫 */
+
+    .card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+
+    .card-text {
+      padding: 1.3rem;
+    }
+
+    .card-text h3 {
+      color: #2e7d32;
+      margin-bottom: 0.7rem;
+      font-size: 1.3rem;
+    }
+
+    .card-text p {
+      color: #555;
+      line-height: 1.7;
+      font-size: 0.98rem;
+    }
+
+    /* 页脚：侗族主题深色，带装饰 */
+    footer {
+  background: linear-gradient(to right, rgba(0, 150, 136, 0.6), rgba(41, 182, 246, 0.6));
+  /* 下面你原来所有的代码 原封不动保留，一个字都不用改 */
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+    footer p {
+      opacity: 0.9;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>瓮安县 · 异地搬迁与风景</h1>
+    <p>古邑新家园 · 红色瓮安景</p >
+  </header>
+
+  <div class="container">
+    <!-- 轮播图：瓮安主题图片 -->
+    <div class="banner" id="banner">
+      <img src="img/江界河.jpg" class="active" alt="江界河风景区">
+      <img src="img/草堂.jpg" alt="草塘千年古邑">
+      <img src="img/会议1.jpg" alt="猴场会议">
+      <img src="img/江界和2.jpg" alt="朱家山原始森林">
+    </div>
+
+    <!-- 介绍板块：瓮安搬迁与风景 -->
+    <section class="intro">
+      <h2>瓮安县易地搬迁·古邑风光</h2>
+      <p>
+        瓮安地处黔中腹地，历史悠久、生态优良，是红色文化与自然山水交融之地。境内峡谷壮美、森林茂密、古镇清幽，
+        红色遗址、自然景观、民族风情相得益彰，素有“千年古邑、红色瓮安”的美誉。
+      </p >
+      <p style="margin-top:1rem;">
+    近年来易地搬迁工程让山区群众喜迁新居，红色文旅与生态旅游同步发展，
+    绘就了一幅古邑换新颜、山水更秀丽、百姓更安居的美好新画卷。   
+      </p >
+    </section>
+
+    <div class="card-box">
+      <div class="card">
+        <img src="img/朱家山1.jpg" alt="江界河风景区">
+        <div class="card-text">
+          <h3>江界河风景区</h3>
+          <p>乌江峡谷壮美险峻，大桥雄跨两岸，山水相依，是集自然观光、红色记忆于一体的国家级风景区。</p >
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="img/草堂1.jpg" alt="草塘千年古邑">
+        <div class="card-text">
+          <h3>草塘千年古邑</h3>
+          <p>黔中文化重镇，古建筑群保存完好，文风鼎盛，商贾古韵依存，是瓮安历史文化核心地标。</p >
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="img/朱家山.jpg" alt="朱家山国家森林公园">
+        <div class="card-text">
+          <h3>朱家山国家森林公园</h3>
+          <p>原始森林覆盖率高，溪流清澈、空气清新，是天然氧吧，生态环境绝佳。</p >
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="img/会议.jpg" alt="红色文化圣地">
+        <div class="card-text">
+          <h3>猴场会议会址</h3>
+          <p>红色革命圣地，被誉为“伟大转折的前夜”，红色底蕴深厚，是经典红色旅游目的地。</p >
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>瓮安县异地搬迁风景展示 | 古邑新貌 · 红色瓮安</p >
+  </footer>
+
+  <script>
+    // 轮播图自动切换
+    const imgs = document.querySelectorAll('#banner img');
+    let index = 0;
+
+    function slide() {
+      imgs[index].classList.remove('active');
+      index = (index + 1) % imgs.length;
+      imgs[index].classList.add('active');
+    }
+
+    setInterval(slide, 3500); // 3.5秒切换一次，节奏更舒服
+  </script>
+</body>
+</html>
