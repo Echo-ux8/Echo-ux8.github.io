@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>三都水族自治县 · 异地搬迁与风景</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Microsoft YaHei", sans-serif;
+    }
+
+    /* 背景：从江主题渐变+纹理感 */
+    body {
+      background: linear-gradient(135deg, #e8f5e9 0%, #fff8e1 50%, #e3f2fd 100%);
+      background-attachment: fixed;
+      color: #333;
+    }
+
+    /* 头部：蓝绿渐变，带装饰 */
+    header {
+  /* 改成：半透明蓝绿渐变，降低饱和度，融入背景 */
+  background: linear-gradient(to right, rgba(0, 150, 136, 0.6), rgba(41, 182, 246, 0.6));
+  color: white;
+  text-align: center;
+  padding: 2.5rem 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* 阴影也减淡，更轻薄 */
+}
+
+    header h1 {
+      font-size: 2.2rem;
+      margin-bottom: 0.6rem;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+    }
+
+    header p {
+      font-size: 1.2rem;
+      opacity: 0.95;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+
+    /* 轮播图：圆角+阴影+绿色边框 */
+    .banner {
+      width: 100%;
+      height: 450px;
+      position: relative;
+      overflow: hidden;
+      margin: 30px auto;
+      border-radius: 16px;
+      box-shadow: 0 6px 20px rgba(0,100,0,0.15);
+      border: 3px solid #81c784;
+    }
+
+    .banner img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      opacity: 0;
+      transition: opacity 1.5s ease;
+    }
+
+    .banner img.active {
+      opacity: 1;
+    }
+
+    /* 介绍板块：米白+浅绿边框，层次分明 */
+    .intro {
+      background: #ffffff;
+      padding: 2.2rem;
+      border-radius: 16px;
+      margin-bottom: 2.5rem;
+      box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+      border-left: 6px solid #43a047;
+      line-height: 1.8;
+      font-size: 1.05rem;
+    }
+
+    .intro h2 {
+      color: #2e7d32;
+      margin-bottom: 1rem;
+      font-size: 1.7rem;
+      display: flex;
+      align-items: center;
+    }
+
+    .intro h2::before {
+      content: "🌿";
+      margin-right: 10px;
+    }
+
+    /* 卡片布局：多色卡片，区分主题 */
+    .card-box {
+     display: grid;
+     grid-template-columns: repeat(2, 1fr); /* 强制一行2个，平分宽度 */
+     gap: 2rem;
+     margin-bottom: 3.5rem;
+    }
+
+    .card {
+      background: white;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 20px rgba(0,100,0,0.2);
+    }
+
+    /* 卡片顶部彩色条，区分不同主题 */
+    .card:nth-child(1) { border-top: 6px solid #43a047; } /* 生态绿 */
+    .card:nth-child(2) { border-top: 6px solid #1976d2; } /* 新居蓝 */
+    .card:nth-child(3) { border-top: 6px solid #f57c00; } /* 民俗橙 */
+    .card:nth-child(4) { border-top: 6px solid #7b1fa2; } /* 产业紫 */
+
+    .card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+
+    .card-text {
+      padding: 1.3rem;
+    }
+
+    .card-text h3 {
+      color: #2e7d32;
+      margin-bottom: 0.7rem;
+      font-size: 1.3rem;
+    }
+
+    .card-text p {
+      color: #555;
+      line-height: 1.7;
+      font-size: 0.98rem;
+    }
+
+    /* 页脚：侗族主题深色，带装饰 */
+    footer {
+  background: linear-gradient(to right, rgba(0, 150, 136, 0.6), rgba(41, 182, 246, 0.6));
+  /* 下面你原来所有的代码 原封不动保留，一个字都不用改 */
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+    footer p {
+      opacity: 0.9;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>三都水族自治县 · 异地搬迁与风景</h1>
+    <p>水乡新家园 · 山水共温情</p >
+  </header>
+
+  <div class="container">
+    <!-- 轮播图：三都主题图片 -->
+    <div class="banner" id="banner">
+      <img src="img/图片6.jpg" class="active" alt="打鱼平甲瀑布">
+      <img src="img/图片7.jpg" alt="金桥">
+      <img src="img/图片5.png" alt="万户水寨">
+      <img src="img/图片8.jpg" alt="水苗杂居">
+    </div>
+
+    <!-- 介绍板块：三都搬迁与风景 -->
+    <section class="intro">
+      <h2>三都县易地搬迁·水乡秘境</h2>
+      <p>
+        三都水族自治县地处黔南群山之中，是全国唯一的水族自治县。这里山高谷深、溪河纵横，
+        原始森林与碧水瀑布交相辉映，独特的地质奇观与千年水族文化在此共生，被誉为“像凤凰羽毛一样美丽的地方”。
+      </p >
+      <p style="margin-top:1rem;">
+    尧人山的林海氧吧、都柳江的百里画廊、怎雷古寨的梯田云海，与姑鲁产蛋崖的地质奇观、万户水寨的水族风情相互
+    交融，共同绘就了一幅山水灵秀、人文鲜活的秘境画卷。   
+      </p >
+    </section>
+
+    <div class="card-box">
+      <div class="card">
+        <img src="img/图片3.png" alt="秀美江水">
+        <div class="card-text">
+          <h3>都柳江百里画廊</h3>
+          <p>碧水蜿蜒、峰峦叠翠，可乘船观景，一路山水如画，尽显黔南水乡的灵秀之美。</p >
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="img/图片2.png" alt="特色风景">
+        <div class="card-text">
+          <h3>姑鲁产蛋崖（4A）</h3>
+          <p>神奇“石蛋”38年脱落一次，独特的地质奇观，被称为“世界之谜”，充满神秘色彩。</p >
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="img/图片1.png" alt="生态山水">
+        <div class="card-text">
+          <h3>尧人山国家森林公园</h3>
+          <p>原始森林、溪流瀑布，天然氧吧，被誉为“百里林海”，是休闲避暑、亲近自然的绝佳去处。</p >
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="img/图片4.png" alt="民族生态">
+        <div class="card-text">
+          <h3>怎雷古寨</h3>
+          <p>水族和苗族混居村寨，干栏式吊脚楼与梯田云海相映成趣，保留着浓郁的民族原生态风情。</p >
+        </div>
+      </div>
+    </div>
+  </div>
+                                                                                                                                                                                                                                                                                                                                                                                                           
+  <footer>
+    <p>三都水族自治县异地搬迁风景展示 | 水乡新貌 · 山水共融</p >
+  </footer>
+
+  <script>
+    // 轮播图自动切换
+    const imgs = document.querySelectorAll('#banner img');
+    let index = 0;
+
+    function slide() {
+      imgs[index].classList.remove('active');
+      index = (index + 1) % imgs.length;
+      imgs[index].classList.add('active');
+    }
+
+    setInterval(slide, 3500); // 3.5秒切换一次，节奏更舒服
+  </script>
+</body>
+</html>
