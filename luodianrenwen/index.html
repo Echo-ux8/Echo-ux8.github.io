@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>贵州罗甸县 · 特色人文故事</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "微软雅黑", sans-serif;
+        }
+
+        body {
+            /* 改成你要的国风米白底色 */
+            background: #f9f3e9;
+            color: #5a3921;
+            line-height: 1.8;
+            background-image: url(""); /* 可以自己加古风山水底纹 */
+        }
+
+        /* 顶部标题栏，改成红棕国风配色 */
+        .header-banner {
+            background: linear-gradient(90deg, #c0392b, #a52a2a);
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+
+        .header-banner h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+        }
+
+        .header-banner p {
+            font-size: 18px;
+            opacity: 0.95;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        /* 简介模块，国风米白卡片 */
+        .intro-section {
+            background: rgba(255,255,255,0.9);
+            border-radius: 16px;
+            padding: 30px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+            border: 1px solid #d4a373;
+        }
+
+        .intro-section h2 {
+            color: #a52a2a;
+            font-size: 26px;
+            margin-bottom: 15px;
+            border-left: 5px solid #c0392b;
+            padding-left: 15px;
+        }
+
+        .intro-section p {
+            font-size: 17px;
+            color: #5a3921;
+        }
+
+        /* 景点卡片，国风浅棕调 */
+        .scenery-item {
+            display: flex;
+            background: rgba(255,255,255,0.95);
+            border-radius: 16px;
+            overflow: hidden;
+            margin-bottom: 30px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            border: 1px solid #d4a373;
+        }
+
+        .scenery-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .scenery-video {
+            width: 45%;
+            background: #f5e8d8;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .scenery-video video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .scenery-text {
+            width: 55%;
+            padding: 30px;
+        }
+
+        .scenery-text h3 {
+            font-size: 24px;
+            color: #a52a2a;
+            margin-bottom: 15px;
+        }
+
+        .scenery-text p {
+            font-size: 16px;
+            color: #5a3921;
+            text-align: justify;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            color: #8b5a2b;
+            background: rgba(255,255,255,0.8);
+            font-size: 15px;
+            border-top: 1px solid #d4a373;
+        }
+    </style>
+</head>
+<body>
+    <div class="header-banner">
+        <h1>📜 贵州罗甸县 · 特色人文故事</h1>
+        <p>长寿之乡·湖城罗甸｜一方山水，一段人文传奇</p >
+    </div>
+
+    <div class="container">
+        <div class="intro-section">
+            <h2>罗甸人文简介</h2>
+            <p>罗甸地处贵州南部，素有“天然温室、长寿之乡”的美誉。这里山水相依、民族交融，布依文化、红色文化、农耕文化交相辉映，既有壮美的自然传说，也有厚重的历史印记，更有淳朴热情的民族风情，构成罗甸独特的人文画卷。</p >
+        </div>
+
+        <!-- 1 大小井风光与布依传说 -->
+        <div class="scenery-item">
+            <div class="scenery-video">
+                <video controls muted loop playsinline>
+                    <source src="vedio/vedio1.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="scenery-text">
+                <h3>大小井：布依秘境的山水传说</h3>
+                <p>大小井是罗甸标志性山水秘境，青山碧水、溶洞成群，流传着布依族神仙赐水、守护村寨的古老传说。布依族人世代在此繁衍生息，依山水而居、以歌舞为伴，将自然敬畏融入生活，成为布依文化的鲜活载体。</p >
+            </div>
+        </div>
+
+       
+
+        <!-- 3 布依铜鼓十二调 -->
+        <div class="scenery-item">
+            <div class="scenery-video">
+                <video controls muted loop playsinline>
+                    <source src="vedio/vedio4.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="scenery-text">
+                <h3>布依铜鼓十二调：非遗古韵</h3>
+                <p>布依铜鼓十二调是罗甸非物质文化遗产，鼓声沉稳、韵律古朴，用于节庆、祭祀、迎宾等场合，承载布依族历史、信仰与生活习俗。一鼓一声皆是乡愁，奏响布依民族千年文化传承。</p >
+            </div>
+        </div>
+
+        <!-- 4 罗甸长寿文化：康养人文底蕴 -->
+        <div class="scenery-item">
+            <div class="scenery-video">
+                <video controls muted loop playsinline>
+                    <source src="vedio/vedio2.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="scenery-text">
+                <h3>长寿罗甸：康养人文底蕴</h3>
+                <p>罗甸气候温润、食材天然，是远近闻名的长寿之乡。当地百姓崇尚自然、心态平和、饮食简朴，形成独特的长寿文化与生活智慧，传递着人与自然和谐共生的质朴理念。</p >
+            </div>
+        </div>
+
+        <!-- 5 布依糯食文化与乡土风情 -->
+        <div class="scenery-item">
+            <div class="scenery-video">
+                <video controls muted loop playsinline>
+                    <source src="vedio/vedio3.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="scenery-text">
+                <h3>布依糯食文化：烟火里的乡愁</h3>
+                <p>罗甸布依族世代传承糯食文化，糯米制品贯穿节庆、婚嫁、待客等重要时刻。剪粉、荷叶粑、花糯饭等美食，承载民族习俗与家的味道，是布依人勤劳善良、热情好客的最好体现。</p >
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>贵州罗甸县特色人文故事网页 | 长寿之乡 · 湖城罗甸</p >
+    </footer>
+</body>
+</html>
